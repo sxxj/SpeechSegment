@@ -2,5 +2,5 @@
 
 ### [Open SLR](https://www.openslr.org/12)
   - 16kHz
-  - >10s clips
+  - clips less than 10s 
   - Single speaker 
