@@ -14,11 +14,11 @@
 % x = readData('C:\Documents\EE 6255\AudioFolder',5);
 
 
-function x = readData(folder_path,count)
-str = [".wav",".mp3"];
+function [x,fs] = readData(folder_path,count)
+str = [".wav",".mp3",".flac"];
 if isfolder(folder_path) == 0
-    ME = MException('%s is not a valid path',folder_path);
-    throw(ME)
+    ME = sprintf('%s is not a valid path',folder_path);
+    error(ME)
 end
 
 contents = dir(folder_path);
@@ -27,7 +27,7 @@ audio_files = find(contains(x(:,1),str,'IgnoreCase',true));
 
 if count ~= 'all'
     if count>=length(audio_files)
-        disp('There are only %s audio files',length(audio_files))
+        disp(sprintf('There are only %i audio files',length(audio_files)))
     else 
         audio_files = audio_files(1:count);
     end
@@ -38,8 +38,8 @@ file_names = x(audio_files,1);
 paths = strcat(file_paths,'\');
 paths = strcat(paths,file_names);
 x = {};
-
+fs = {};
 for i = 1:length(paths(:,1))
-    x{i}  = audioread(cell2mat(paths(i)));
+    [x{i}, fs{i}]  = audioread(cell2mat(paths(i)));
 end
 end
