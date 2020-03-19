@@ -15,6 +15,6 @@
 function xx = zcross(audio,window,winLen)
 audio(audio>=0) = 1;
 audio(audio<0) = -1;
-xx = (diff(buffer(audio, winLen)));
-xx = length(xx(xx == 0));
+xx = (movsum(buffer(audio, winLen),2));
+xx = sum(xx == 0);
 end
