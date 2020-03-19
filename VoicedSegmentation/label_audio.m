@@ -11,7 +11,7 @@
 % OUTPUT: 
 %   A 1xn cell 
 %   Each cell countains a nx2 array. The first column in the array is the 
-%   audio. The second colum is the label array. Each array is sampled as
+%   audio. The second colum is the label array. Each array is labeled as
 %   such:
 %   0: Silent
 %   1: Unvoiced (noise)
