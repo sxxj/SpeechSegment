@@ -23,11 +23,17 @@
 % x = labelData('C:\Documents\EE 6255\AudioFolder',5);
 
 
-function x = labelData(folder_path,count)
+function x = label_audio(folder_path,count)
 [x,fs] = readData(folder_path,count);
 for i=1:length(x)
 %Extract each audio file
 y = x{i};
+
+%Add a silent region in case it is not present in the audio
+silent = zeros(round(length(y)/5),1);
+y = [silent;y];
+
+%Find beginning of the audio
 audio = find(y~=0);
 
 %Add white noise
@@ -41,7 +47,6 @@ y2 = zeros(length(y),1);
 y2(length(y)-noise_length:length(y)) = 1;
 y2(audio) = 2;
 y(:,2) = y2;
-plot(y(:,1))
 x{i} = y;
 end
 end
