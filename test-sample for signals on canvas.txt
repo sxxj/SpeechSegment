@@ -1,0 +1,31 @@
+Sound three sentences
+0 - 0.085 unvoiced 
+0.085 - 1.477 voiced
+1.477 - 1.655 unvoiced
+1.655 - 1.934 voiced 
+1.934 - 2.173 unvoiced
+2.173 - 2.6 voiced 
+2.6 - 2.782 unvoiced
+2.782 - 3.128 voiced
+3.128 - 3.236 unvoiced
+3.236 - 3.92 voiced
+3.92 - 4.074 unvoiced
+4.074 - 4.163 voiced 
+4.163 - 4.256 unvoiced
+4.256 - 4.579 voiced
+4.578 - 4.651 unvoiced
+4.651 -5.251 voiced
+5.251 - 5.349 unvoiced
+5.349 - 5.574 voiced
+
+
+tsignal
+0.076 - 0.418 voiced
+0.418 - 0.502 unvoiced
+0.502 - 1.082 voiced
+1.082 - 1.193  unvoiced 
+1.193 - 1.454 voiced
+1.454 - 1.558 unvoiced
+1.558 - 1.856 voiced
+1.856 - 1.923 unvoiced
+1.923 - 2.081 voiced 
